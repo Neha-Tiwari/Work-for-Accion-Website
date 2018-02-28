@@ -1,0 +1,300 @@
+            
+    
+    <section class="page-section hero-banner">
+        <div class="page-wrap"> 
+            <div class="slider-wrap">
+            <swiper [config]="config" >
+               
+                    <div class="swiper-wrapper">
+                        <!-- <div class="slider-wrap"> -->
+
+                            <div class="swiper-slide" *ngFor="let slide1 of sliderarr1">
+                                <li 
+                                    [class.selected]="slide1 === selectedSlide1"
+                                    (click)="onSelect(slide1)">
+
+                                <!-- <div class="aligner">
+                                    align="left" width="50%" margin="0 auto"-->
+                                    <div class="animated-svg">
+                                        <div class="svg-slide">
+                                                <figure id="tagline" class="main-svg">
+                                                    <span class="burst-anim">
+                                                        <!-- img height="550px" width="500px" align="right" -->
+                                                            <img src={{slide1.img2}} alt="" class="inject-me" height="450px" width="450px" align-item="right">
+                                                    </span>
+                                                </figure>
+                                        </div>
+                                    </div>
+                                    <div class="vertical-content aligner-item"> 
+                                        <h2 class="typewriter">
+                                            <strong class="js-letters mast__text smallblack">{{slide1.title1}}
+                                            </strong>
+                                            <span class="js-letters mast__text"> {{slide1.title2}} </span>
+                                            <span class="js-letters mast__text">
+                                           {{slide1.title3}}
+                                            </span>
+                                            <span class="js-letters mast__text"> {{slide1.title4}}</span>
+                                        </h2>
+                                        <p>{{slide1.desc}}</p>
+                                        <a href="#section_capabilities" class="main-cta">Our Capabilities {{slide1.link}}<i class="icon-arrow_downward"></i></a>
+                                        
+                                    </div>
+                                    
+                                <!-- </div> --> 
+                            </div>
+
+
+                            <!--
+
+
+                            <div class="swiper-slide" *ngFor="let image of images">
+
+                            vertical content align="left" width="50%" margin="0 auto"
+                                <div class="animated-svg">
+                                    <div class="svg-slide">
+                                            <figure id="tagline" class="main-svg">
+                                                <span class="burst-anim">
+                                                    <img src="./assets/img/burst.svg" alt="" class="inject-me" height="450px" width="450px" align-item="right">
+                                                </span>
+                                            </figure>
+                                    </div>
+                                </div>
+
+                                <div class="vertical-content aligner-item" > 
+                                        <h2 class="typewriter">
+                                                <strong class="js-letters mast__text smallblack">Accelerating
+                                                </strong>
+                                                <span class="js-letters mast__text">Product</span>
+                                                <span class="js-letters mast__text">Development</span>
+                                                <span class="js-letters mast__text">And Go-To</span>
+                                                <span class="js-letters mast__text">Market Strategy</span>
+                                            </h2>
+                                            <p>Get to market faster and scale to unpredictable customer demands quickly
+                                            </p>
+                                </div>
+                                
+                                <<div class="aligner"> 
+                                
+                                </div> 
+                            </div>
+
+                            <div class="swiper-slide" *ngFor="let image of images">
+                                <div class="animated-svg">
+                                    <div class="svg-slide">
+                                            <figure id="tagline" class="main-svg">
+                                                <span class="burst-anim">
+                                                        <img src="./assets/img/burst.svg" alt="" class="inject-me" height="480px" width="480px" align-item="right">
+                                                </span>
+                                            </figure>
+                                    </div>
+                                </div>
+                                <div class="vertical-content aligner-item"> 
+                                        <h2 class="typewriter">
+                                                <strong class="js-letters mast__text smallblack">Designing
+                                                </strong>
+                                            <span class="js-letters mast__text">Addictive And </span>
+                                            <span class="js-letters mast__text">Engaging User</span>
+                                            <span class="js-letters mast__text">Experiences</span>
+                                        </h2>
+                                        <p>Build personalized, seamless and conversational digital interface for users </p>
+                                </div>
+                                
+                                <!-- <div class="aligner">
+                                
+                                </div> 
+                            </div>
+
+                            <div class="swiper-slide" *ngFor="let image of images">
+                                    <div class="animated-svg">
+                                        <div class="svg-slide">
+                                                <figure id="tagline" class="main-svg">
+                                                    <span class="burst-anim">
+                                                        <img src="./assets/img/burst.svg" alt="" class="inject-me" height="480px" width="480px" align-item="right">
+                                                    </span>
+                                                </figure>
+                                        </div>
+                                    </div>    
+                                    <div class="vertical-content aligner-item" > 
+                                            <h2 class="typewriter">
+                                                    <strong class="js-letters mast__text smallblack">Re-Enginnering
+                                                    </strong>
+                                                    <span class="js-letters mast__text">Conventional</span>
+                                                    <span class="js-letters mast__text">Problems with</span>
+                                                    <span class="js-letters mast__text">Smart Technology</span>
+                                                </h2>
+                                                <p>Solve simple to complex technology or business problems with faster, leaner and smarter digital engineering</p>
+                                    </div>
+                                    
+                            </div>
+                        <!-- </div> 
+
+
+                        -->
+
+
+                    </div>
+
+                    <!-- <div class="swiper-scrollbar"></div> -->
+                
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <!-- <div class="swiper-button-next"></div> -->
+                    <!-- <div class="swiper-button-prev"></div> -->
+                
+               
+            </swiper>
+            </div>
+        </div>    
+        <div class="wave parallax-img">
+            <img src="img/waves.svg" alt="" class="inject-me">
+        </div>
+  
+        <span class="mouse-anim">
+        <img src="img/mouse.svg" alt="" class="inject-me">
+        </span>    
+    </section> 
+
+
+                
+    
+    <section class="page-section hero-banner">
+        <div class="page-wrap"> 
+            <div class="slider-wrap">
+            <swiper [config]="config" >
+               
+                    <div class="swiper-wrapper">
+                        <!-- <div class="slider-wrap"> -->
+
+                            <div class="swiper-slide" *ngFor="let image of images">
+                                <!-- <div class="aligner">
+                                    align="left" width="50%" margin="0 auto"-->
+                                    <div class="animated-svg">
+                                        <div class="svg-slide">
+                                                <figure id="tagline" class="main-svg">
+                                                    <span class="burst-anim">
+                                                        <!-- img height="550px" width="500px" align="right" -->
+                                                            <img src="./assets/img/burst.svg" alt="" class="inject-me" height="450px" width="450px" align-item="right">
+                                                    </span>
+                                                </figure>
+                                        </div>
+                                    </div>
+                                    <div class="vertical-content aligner-item"> 
+                                        <h2 class="typewriter">
+                                            <strong class="js-letters mast__text smallblack">Crafting
+                                            </strong>
+                                            <span class="js-letters mast__text"> Innovations </span>
+                                            <span class="js-letters mast__text">
+                                            with Emerging
+                                            </span>
+                                            <span class="js-letters mast__text"> Technologies</span>
+                                        </h2>
+                                        <p>Gear up for the future with latest technology trends and explore new ways of doing business</p>
+                                        <a href="#section_capabilities" class="main-cta">Our Capabilities <i class="icon-arrow_downward"></i></a>
+                                        
+                                    </div>
+                                    
+                                <!-- </div> --> 
+                            </div>
+
+                            <div class="swiper-slide" *ngFor="let image of images">
+                            <!-- vertical content align="left" width="50%" margin="0 auto" -->
+                                <div class="animated-svg">
+                                    <div class="svg-slide">
+                                            <figure id="tagline" class="main-svg">
+                                                <span class="burst-anim">
+                                                    <img src="./assets/img/burst.svg" alt="" class="inject-me" height="450px" width="450px" align-item="right">
+                                                </span>
+                                            </figure>
+                                    </div>
+                                </div>
+
+                                <div class="vertical-content aligner-item" > 
+                                        <h2 class="typewriter">
+                                                <strong class="js-letters mast__text smallblack">Accelerating
+                                                </strong>
+                                                <span class="js-letters mast__text">Product</span>
+                                                <span class="js-letters mast__text">Development</span>
+                                                <span class="js-letters mast__text">And Go-To</span>
+                                                <span class="js-letters mast__text">Market Strategy</span>
+                                            </h2>
+                                            <p>Get to market faster and scale to unpredictable customer demands quickly
+                                            </p>
+                                </div>
+                                
+                                <!-- <div class="aligner">
+                                
+                                </div> -->
+                            </div>
+
+                            <div class="swiper-slide" *ngFor="let image of images">
+                                <div class="animated-svg">
+                                    <div class="svg-slide">
+                                            <figure id="tagline" class="main-svg">
+                                                <span class="burst-anim">
+                                                        <img src="./assets/img/burst.svg" alt="" class="inject-me" height="480px" width="480px" align-item="right">
+                                                </span>
+                                            </figure>
+                                    </div>
+                                </div>
+                                <div class="vertical-content aligner-item"> 
+                                        <h2 class="typewriter">
+                                                <strong class="js-letters mast__text smallblack">Designing
+                                                </strong>
+                                            <span class="js-letters mast__text">Addictive And </span>
+                                            <span class="js-letters mast__text">Engaging User</span>
+                                            <span class="js-letters mast__text">Experiences</span>
+                                        </h2>
+                                        <p>Build personalized, seamless and conversational digital interface for users </p>
+                                </div>
+                                
+                                <!-- <div class="aligner">
+                                
+                                </div> -->
+                            </div>
+
+                            <div class="swiper-slide" *ngFor="let image of images">
+                                    <div class="animated-svg">
+                                        <div class="svg-slide">
+                                                <figure id="tagline" class="main-svg">
+                                                    <span class="burst-anim">
+                                                        <img src="./assets/img/burst.svg" alt="" class="inject-me" height="480px" width="480px" align-item="right">
+                                                    </span>
+                                                </figure>
+                                        </div>
+                                    </div>    
+                                    <div class="vertical-content aligner-item" > 
+                                            <h2 class="typewriter">
+                                                    <strong class="js-letters mast__text smallblack">Re-Enginnering
+                                                    </strong>
+                                                    <span class="js-letters mast__text">Conventional</span>
+                                                    <span class="js-letters mast__text">Problems with</span>
+                                                    <span class="js-letters mast__text">Smart Technology</span>
+                                                </h2>
+                                                <p>Solve simple to complex technology or business problems with faster, leaner and smarter digital engineering</p>
+                                    </div>
+                                    
+                            </div>
+                        <!-- </div> -->
+                    </div>
+
+                    <!-- <div class="swiper-scrollbar"></div> -->
+                
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <!-- <div class="swiper-button-next"></div> -->
+                    <!-- <div class="swiper-button-prev"></div> -->
+                
+               
+            </swiper>
+            </div>
+        </div>    
+        <div class="wave parallax-img">
+            <img src="img/waves.svg" alt="" class="inject-me">
+        </div>
+  
+        <span class="mouse-anim">
+        <img src="img/mouse.svg" alt="" class="inject-me">
+        </span>    
+    </section> 

@@ -1,0 +1,784 @@
+
+  
+  <div class="canvas">
+
+    <!-- Section header of index.html - angular starts here -->
+    <header class="top-nav">
+
+          <div class="page-wrap row" >
+              <div class="branding col">
+                <ul class="clogo" *ngFor="let clogo of clogoarray">
+                  <li 
+                    [class.selected]="clogo === selectedClogo"
+                    (click)="onSelect(clogo)">
+                    <a href="#nogo" class="logo">
+                      <!-- <img src="img/logo.svg" alt="" class="inject-me">  -->
+                      <img src={{clogo.clogo1}} alt="clogo" class="inject-me">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              
+            <nav class="col nav-bar">
+                  <ul>
+                      <li 
+                          [class.selected]="head === selectedHead"
+                          (click)="onSelect(head)">
+                            <ul class="main-nav row" >
+                                <li *ngFor="let head of headerarray">
+                                    <a href="capabilities.html">  
+                                        <span class="small">{{head.ldesc1}}</span>
+                                        <span class="label">
+                                          {{head.lhead1}}
+                                          <i class="fa fa-angle-down"></i>
+                                        </span>
+                                      </a> 
+                                </li>
+
+                                <li class="full-nav-icon navicon nav-trigger">
+                                      <a href="#"> <span class="txt">Menu<!--{{head.lhead5}}--></span>
+                                        <i class="icon icon-nav icon-menu"></i>
+                                      </a>
+                                </li>
+
+                                <li class="navicon">
+                                  <a href="#"><!--{{head.search}} -->
+                                      <!-- <i class="icon icon-nav icon-search"></i> -->
+                                      <i class="fa fa-search"></i>
+                                  </a>
+                                </li>
+        
+                                <li>
+                                  <a href="#"><!--{{head.talkbutton}}-->
+                                    <span class="cta-btn">Let's Talk</span>
+                                  </a>
+                                </li>
+                            </ul>   
+                      </li>
+                  </ul>
+            </nav>      
+        </div>
+    </header>
+    <!-- Section header of index.html - angular ends here -->
+
+    <main class="page">
+
+      <!-- slider section -angular starts here -->
+
+      <section class="page-section hero-banner">
+        <div class="page-wrap" > 
+            <div class="slider-wrap">
+              <swiper [config]="config" >
+                
+                <div class="swiper-wrapper">
+                  <!-- <div class="slider-wrap"> -->
+                    <div class="swiper-slide" *ngFor="let slide1 of sliderarr1">
+                        <li class="slide vertical-center"
+                            [class.selected]="slide1 === selectedSlide1"
+                            (click)="onSelect(slide1)">
+                            <div class="animated-svg">
+                              <div class="svg-slide">
+                                  <figure id="tagline" class="main-svg">
+                                    <span class="burst-anim">
+                                      <img src={{slide1.img2}} alt="" class="inject-me" height="450px" width="450px" align-item="right">
+                                          </span>
+                                  </figure>
+                              </div>
+                            </div>
+                            <div class="aligner">
+                              <div class="vertical-content aligner-item"> 
+                                <h2 class="typewriter">
+                                    <strong class="js-letters mast__text smallblack">{{slide1.title1}}</strong>
+                                    <span class="js-letters mast__text"> {{slide1.title2}} </span>
+                                    <span class="js-letters mast__text">{{slide1.title3}}</span>
+                                    <span class="js-letters mast__text"> {{slide1.title4}}</span>
+                                </h2>
+                                <p style="font-family: 'Raleway', sans-serif; color: #67717c; font-weight: 600;">{{slide1.desc}}</p>
+                                <a href="#section_capabilities" class="main-cta">Our Capabilities {{slide1.link}}<i class="fa fa-arrow-down"></i></a>     
+                              </div>
+                            </div>
+                        </li>
+                    </div>
+                  <!-- </div> --> 
+                </div>
+
+                      <!-- <div class="swiper-scrollbar"></div> -->
+                  
+                      <!-- Add Pagination -->
+                      <div class="swiper-pagination"></div>
+                      <!-- Add Arrows -->
+                      <!-- <div class="swiper-button-next"></div> -->
+                      <!-- <div class="swiper-button-prev"></div> -->
+                  
+                  
+              </swiper>
+            </div>
+        </div>  
+
+        <div class="wave parallax-img">
+            <!-- <img src="img/waves.svg" alt="" class="inject-me"> -->
+        </div>
+        
+        <span class="mouse-anim">
+          <img src="img/mouse.svg" alt="" class="inject-me">
+        </span>    
+      </section> 
+
+
+      <!-- slider section -angular ends here -->
+
+      <!-- section 1 capability from capability component - angular strats here -->
+
+      <section class="page-section content-block services-section" id="section_capabilities" >
+            <header class="section-heading page-wrap">
+                    <span class="labeltxt">Our Capabilities</span>
+                    <h2 class="sub-heading">This is <span class="highlight">what we do</span>.</h2>
+                      <p style="font-family: 'Raleway', sans-serif; color: #67717c;">
+                       Building digital products requires a range of technology capabilities and skill sets. <br>
+                        Our discovery workshops and dedicated centres of excellence orchestrate a strong  <br> 
+                        execution of design and build with best-fit emerging technology blocks.
+                      </p>
+            </header>
+            <div class="page-wrap" >
+                    <div class="coe-wrap row">
+                      <article class="coe-block col-3 colm-3" *ngFor="let cap of caparray">
+                          <div class="cb-wrap" >
+                            <a href="#">
+                              <ul class="caparray">
+                               <li 
+                                 [class.selected]="cap === selectedCap"
+                                 (click)="onSelect(cap)">
+                                    <figure class="icon">
+                                      <img src={{cap.img}} alt="capimg">
+                                    </figure> 
+                                    <h3 style="font-family: 'Barlow', sans-serif; font-size: 22px;">{{cap.title}} </h3> 
+                                    <p style="font-family: 'Raleway'; font-size: 16px;">{{cap.desc}}</p> 
+                                   <a class="button more-button" href="#" >Learn More 
+                                     <!-- <i class="icon-arrow_forward"></i> -->
+                                     <i class="fa fa-arrow-right"></i>
+                                   </a>
+                                   <br>&nbsp;&nbsp;
+                               </li>
+                               <br>
+                              </ul>
+                              
+                            </a>
+                          </div>
+                      </article>
+                    </div>  
+            </div>
+        </section>
+
+        <!-- section 1 capability from capability component - angular ends here -->
+
+        <!-- // Section 2 for enterprises - angular starts here -->
+
+         <section class="page-section content-block feature-block alt-bg scroll-section" >
+            <div class="vertical-aligner">
+              <div class="page-wrap row" *ngFor="let fimg of fimgarray">
+                <div class="col-6">
+                  <div class="parallax-feature">
+                      <ul class="fimgarray">
+                          <li 
+                            [class.selected]="fimg === selectedFimg"
+                            (click)="onSelect(fimg)">
+                              <figure class="feature-img">
+                                <!--<img src="img/corporate.jpg" alt="">-->
+                                <img src={{fimg.img}} alt="corpimg">
+                              </figure>
+                              <div class="feature-icon">
+                                <!--<figure class="feature-icon">-->
+                                  <!--<img src="img/corporate.jpg" alt="">-->
+                                  <img src={{fimg.icon}} alt="entimg" class="inject-me">
+                                <!-- </figure> -->
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+                </div>
+                <div class="col-6" *ngFor="let ent of entarray">
+                  <div class="aligner">
+                    <div class="align-center">
+                        <ul class="entarray">
+                          <li 
+                            [class.selected]="ent === entarray"
+                            (click)="onSelect(ent)">
+                            <header class="section-heading">
+                              <span class="labeltxt">{{ent.maintitle}}</span>
+                              <h2 class="sub-heading">
+                                <span class="highlight">{{ent.title}}</span>
+                              </h2>
+                            </header>
+                            <article class="excerpt">
+                              <p style="font-family: 'Raleway', sans-serif;
+                              color: #67717c;
+                              font-size: 16px; ">{{ent.desc}}</p>
+                              <a href="#" class="more-btn">
+                                {{ent.link}}Learn More<i class="icon icon-arrow_forward"></i>
+                              </a>
+                              <ul class="related-case-studies row" >
+                                  <li class="item col-6" >
+                                    <figure class="logo-img">
+                                      <!-- <img src="img/awlogo.png" alt="">-->
+                                      <img src={{ent.logo1}} alt="cs1img">
+                                    </figure>
+                                    <a href="#"><h3>{{ent.casestudy1}}<i class="icon icon-arrow_forward">  </i></h3></a>
+                                  </li>
+                                  <li class="item col-6" >
+                                    <figure class="logo-img">
+                                      <!--<img src="img/awlogo.png" alt="">-->
+                                      <img src={{ent.logo2}} alt="cs2img">
+                                    </figure>
+                                    <a href="#"><h3>{{ent.casestudy2}}<i class="icon icon-arrow_forward"></i></h3></a>
+                                  </li>
+                              </ul>
+                            </article>
+                          </li>
+                        </ul>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </section>
+
+        <!-- // Section 2 For enterprises - angular ends here -->
+
+         <!--// Section for Tech / Startup Companies - angular starts here -->
+
+        <section class="page-section content-block feature-block scroll-section">
+          <div class="vertical-aligner" *ngFor="let sup of startuparray">
+            <div class="page-wrap row">
+              <div class="col-6">
+                <div class="aligner">
+                  <div class="align-center">
+                      <ul class="startuparray">
+                          <li 
+                            [class.selected]="sup === startuparray"
+                            (click)="onSelect(sup)">
+                            <header class="section-heading">
+                              <span class="labeltxt">{{sup.maintitle}}</span>
+                              <h2 class="sub-heading"><span class="highlight">{{sup.title}}</span></h2>
+                            </header>
+                            <article class="excerpt">
+                              <p style="font-family: 'Raleway', sans-serif;
+                              color: #67717c;
+                              font-size: 16px;" >{{sup.desc}}</p>
+                              <a href="#" class="more-btn">
+                                {{sup.link}} Learn More <i class="fa fa-arrow-right"></i>
+                             </a>
+                              <ul class="related-case-studies row">
+                                <li class="item col-6">
+                                  <figure class="logo-img">
+                                    <!-- <img src="img/awlogo.png" alt=""> -->
+                                    <img src={{sup.logo1}} alt="cs1img">
+                                 </figure>
+                                  <a href="#"><h3>{{sup.casestudy1}}<i class="icon icon-arrow_forward"></i></h3></a>
+                                </li>
+                                <li class="item col-6">
+                                  <figure class="logo-img">
+                                    <!-- <img src="img/awlogo.png" alt=""> -->
+                                    <img src={{sup.logo2}} alt="cs2img">
+                                  </figure>
+                                  <a href="#"><h3>{{sup.casestudy2}}<i class="icon icon-arrow_forward"></i></h3></a>
+                                </li>
+                              </ul>
+                          </article>
+                        </li>
+                      </ul>  
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+               <div class="parallax-feature" *ngFor="let simg of simgarray">
+                <figure class="feature-img">
+                  <!-- <img src="img/technology.jpg" alt=""> -->
+                  <img src={{simg.img}} alt="techimg">
+                </figure>
+                <div class="feature-icon">
+                  <!-- <img src="img/startup.svg" alt="" class="inject-me"> -->
+                  <img src={{simg.icon}} alt="startimg">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--// Section for Tech Companies - angular ends here -->
+ 
+      <!-- Section for  Open source technologies - angular starts here -->
+
+      <section class="page-section content-block feature-block alt-bg scroll-section">
+          <div class="vertical-aligner" >
+            <div class="page-wrap row" *ngFor="let oimg of oimgarray">
+              <div class="col-6">
+               <div class="parallax-feature">
+                  <ul class="oimgarray">
+                      <li 
+                        [class.selected]="oimg === selectedoimg"
+                        (click)="onSelect(oimg)">                
+                        <figure class="feature-img">
+                          <!-- <img src="img/retail.jpg" alt=""> -->
+                          <img src={{oimg.img}} alt="retailimg">
+                        </figure>
+                        <div class="feature-icon">
+                          <!-- <img src="img/opensource.svg" class="inject-me" alt=""> -->
+                          <img src={{oimg.icon}} alt="osimg" class="inject-me">
+                        </div>
+                      </li> 
+                  </ul> 
+                </div>
+            </div>
+            <div class="col-6" *ngFor="let opens of opensarray">
+              <div class="aligner">
+                <div class="align-center">
+                    <ul class="opensarray">
+                        <li 
+                          [class.selected]="opens === opensarray"
+                          (click)="onSelect(opens)">
+                          <header class="section-heading">
+                           <span class="labeltxt">{{opens.maintitle}}</span>
+                            <h2 class="sub-heading"><span class="highlight">
+                              {{opens.title}}</span>
+                            </h2>
+                          </header>
+                          <article class="excerpt">
+                            <p style="font-family: 'Raleway', sans-serif;
+                            color: #67717c;
+                            font-size: 16px;" >{{opens.desc}}</p>
+                            <a href="#" class="more-btn">{{opens.link}} Learn More <i class="fa fa-arrow-right"></i></a>
+                            <ul class="related-case-studies row">
+                              <li class="item col-6">
+                                <figure class="logo-img">
+                                  <!-- <img src="img/awlogo.png" alt=""> -->
+                                  <img src={{opens.logo1}}>
+                                </figure>
+                                <a href="#"><h3>{{opens.casestudy1}}<i class="icon icon-arrow_forward"></i></h3></a>
+                              </li>
+                              <li class="item col-6">
+                                  <figure class="logo-img">
+                                    <!-- <img src="img/awlogo.png" alt=""> -->
+                                    <img src={{opens.logo2}}>
+                                  </figure>
+                                  <a href="#"><h3>{{opens.casestudy2}}<i class="icon icon-arrow_forward"></i></h3></a>
+                              </li>
+                            </ul>
+                          </article>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section for  Open source technologies - angular ends here -->
+     
+      <!-- Section Engagement model - angular starts here -->
+
+      <section class="process-section page-section content-block">
+          <header class="section-heading center">
+              <span class="labeltxt">Engagement Models</span>
+              <h2 class="sub-heading">How do <span class="highlight">we work</span>.</h2>
+          </header>
+          <div class="page-wrap">
+            <div class="coe-wrap row">
+              <article class="coe-block col-4" *ngFor="let enmodel of enmodelarray">
+                <div class="cb-wrap">
+                  <a href="#">
+                    <ul class="enmodelarray">
+                        <li 
+                          [class.selected]="enmodel === selectedEnmodel"
+                          (click)="onSelect(enmodel)">
+                          <figure class="icon">
+                            <img src={{enmodel.img}} alt="enmodel">
+                          </figure>
+                          <h3 style="font-family: 'Barlow', sans-serif; font-size: 16px;">{{enmodel.title}}</h3>
+                          <p style="font-family: 'Raleway', sans-serif; font-size: 16px;">{{enmodel.desc}}</p>
+                          <a href="#" class="button more-button">{{enmodel.link}} Learn More <i class="fa fa-arrow-right"></i> </a>
+                        </li>
+                    </ul>
+                  </a>
+                </div>
+            </article>
+          </div>
+        </div>
+     </section>
+
+    <!-- Section Engagement model - angular ends here -->
+
+    <!-- Section Our Clients - angular starts here -->
+
+     <section class="customer-logos page-section content-block">
+       <div class="page-wrap">
+          <header class="section-heading center">
+                   <span class="labeltxt">Our Clients</span>
+                   <h2 class="sub-heading">These companies <span class="highlight">trust us</span>.</h2>
+          </header>
+          <div class="row logo-list-wrap">
+              <div class="logo-col col-3" *ngFor="let clogo of clientlogoarray">
+                  <ul class="clientlogoarray">
+                      <li 
+                        [class.selected]="clogo === selectedClogo"
+                        (click)="onSelect(clogo)">
+
+                      <img src={{clogo.img}} alt={{clogo.alt}}>
+                      </li>
+                  </ul>
+              </div>
+          </div>  
+       </div>
+     </section>
+
+    <!-- Section Our Clients - angular ends here -->
+
+     <!-- case study, lets talk, newsletter - angular starts here-->
+
+     <section class="page-section cta-section">
+        <div class="row page-wrap">
+          <div class="col-6 column" *ngFor="let cstalk of cstudytalk">
+            <a href="#" class="cta-block">
+              <span class="bg-img">
+                <img src={{cstalk.bgimg}} alt="cstudy">
+                <!-- <img src="img/work.jpeg" alt=""> -->
+              </span>
+              <div class="cta-wrap vertical-aligner">
+                <article class="vertical-center">
+                  <h2>{{cstalk.title}}</h2>
+                  <p>{{cstalk.desc}}
+                    <!-- <i class="cta-icon icon-arrow_forward"></i> -->
+                    <i class="fa fa-arrow-right"></i>
+                  </p>
+                </article>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="page-wrap newsletter-wrap">
+          <form action="#" class="row">
+            <div class="text-field col-10">
+              <label for="email">
+                Join our newsletter
+              </label>
+              <input type="text" id="email" name="email"  placeholder="Enter your e-mail" autocomplete="off">
+            </div>
+
+            <div class="button-field col-2">
+              <button>
+                Subscribe 
+                <!-- <i class="cta-icon icon-arrow_forward"></i> -->
+                <i class="fa fa-arrow-right"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+    </section>
+
+     <!-- case study, lets talk, newsletter - angular ends here-->
+
+    </main>
+
+    <!-- Footer for Accion - Angular starts here -->
+    <footer class="global-footer">
+        <div class="page-wrap">
+            <div class="row footer-row">
+              <div class="footer-col col-3" *ngFor="let line1 of line1footer">
+
+               <ul class="line1footer">
+                  <li 
+                      [class.selected]="line1 === selectedLine1"
+                      (click)="onSelect(line1)">
+
+                          <h1><span class="hidden">{{line1.clogo}}</span>
+                            <a href="#" class="footer-logo">
+                              <!-- <img src="img/logo.svg" alt="" class="inject-me"> -->
+                            </a>
+                            <span class="sub-title">
+                              {{line1.title1}}<br/>{{line1.title2}}
+                            </span>
+                            </h1>
+
+                            <ul class="footer-nav">
+                              <li>
+                                <a href="#"><i class="fa fa-arrow-right"></i> {{line1.link1}}</a>
+                              </li>
+                              <li>
+                                <a href="#"><i class="fa fa-arrow-right"></i> {{line1.link2}}</a>
+                              </li>
+                              <li>
+                                <a href="#"><i class="fa fa-arrow-right"></i> {{line1.link3}}</a>
+                              </li>
+                              <li>
+                                <a href="#"><i class="fa fa-arrow-right"></i> {{line1.link4}}</a>
+                              </li>
+
+                            </ul>
+
+                            <h2>{{line1.title3}}</h2>
+
+                            <ul class="social-nav">
+                              <li>
+                                <a href="#">
+                                  <i class="fa fa-facebook-f"></i>
+                                </a>
+                              </li>
+                              <li>
+
+                                <a href="#">
+                                  <i class="fa fa-twitter"></i>
+                                </a>
+
+                                </li>
+
+                                <li>
+
+                                <a href="#">
+                                  <i class="fa fa-google-plus-g"></i>
+                                </a>
+                                </li>
+
+                                <li>
+                                <a href="#">
+                                  <i class="fa fa-linkedin-in"></i>
+                                </a>
+                                </li>
+
+
+                                <li>
+                                <a href="#">
+                                  <i class="fa fa-youtube"></i>
+                                </a>
+
+                              </li>
+                            </ul>
+                        </li>
+                  </ul>    
+              </div>
+
+              <div class="footer-col col-3" *ngFor="let line2 of line2footer">
+                <ul class="line2footer">
+                  <li 
+                    [class.selected]="line2 === selectedLine2"
+                    (click)="onSelect(line2)">
+
+                    <h2>{{line2.title1}}</h2>
+
+                      <ul class="footer-nav">
+                          <li>
+                          <a href="#"><i class="fa fa-arrow-right"></i>{{line2.link1}}</a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fa fa-arrow-right"></i>{{line2.link2}}</a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fa fa-arrow-right"></i>{{line2.link3}}</a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fa fa-arrow-right"></i>{{line2.link4}}</a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fa fa-arrow-right"></i>{{line2.link5}}</a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fa fa-arrow-right"></i>{{line2.link6}}</a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fa fa-arrow-right"></i>{{line2.link7}}</a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fa fa-arrow-right"></i>{{line2.link8}}</a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fa fa-arrow-right"></i>{{line2.link9}}</a>
+                        </li>
+
+                      </ul>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="footer-col col-3" *ngFor="let line3 of line3footer">
+                  <ul class="line3footer">
+                    <li 
+                      [class.selected]="line2 === selectedLine2"
+                      (click)="onSelect(line2)">
+
+
+                        <h2>{{line3.title1}}</h2>
+
+                          <ul class="footer-nav">
+                            <li>
+                              <a href="#"><i class="fa fa-arrow-right"></i>{{line3.link1}}</a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa fa-arrow-right"></i>{{line3.link2}}</a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa fa-arrow-right"></i>{{line3.link3}}</a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa fa-arrow-right"></i>{{line3.link4}}</a>
+                            </li>
+                          </ul>
+
+                          <h2>{{line3.title2}}</h2>
+
+                          <ul class="footer-nav">
+                            <li>
+                              <a href="#"><i class="fa fa-arrow-right"></i>{{line3.link5}}</a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa fa-arrow-right"></i>{{line3.link6}}</a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa fa-arrow-right"></i>{{line3.link7}}</a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa fa-arrow-right"></i>{{line3.link8}}</a>
+                            </li>
+                          </ul>
+                    </li>
+                  </ul>   
+
+              </div>
+
+              <div class="footer-col col-3" *ngFor="let line4 of line4footer"> 
+                  <ul class="line4footer">
+                      <li 
+                        [class.selected]="line4 === selectedLine4"
+                        (click)="onSelect(line4)">
+
+                        <h2>{{line4.title1}}</h2>
+
+                        <ul class="footer-nav">
+                          <li>
+                            <a href="#">{{line4.link1}}</a>
+                          </li>
+                          <li>
+                            <a href="#">{{line4.link2}}</a>
+                          </li>
+                          <li>
+                            <a href="#">{{line4.link3}}</a>
+                          </li>
+                          <li>
+                            <a href="#">{{line4.link4}}</a>
+                          </li>
+                        </ul>
+
+
+                        <h2>{{line4.title2}}</h2>
+
+                        <ul class="footer-nav">
+                          <li>
+                            <a href="#"><i class="fa fa-arrow-right"></i>{{line4.link5}}</a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-arrow-right"></i>{{line4.link6}}</a>
+                          </li>
+                        </ul>
+                      </li>
+                  </ul>    
+              </div>
+
+            </div>
+
+
+            <div class="legal row">
+                  <ul class="baseline1" *ngFor="let base1 of baseline1">
+                    <li 
+                      [class.selected]="base1 === selectedBase1"
+                      (click)="onSelect(base1)">
+
+                      <span class="col-3" style="color: #67717c;">
+                        <!-- {{base1.copyright}}  -->
+                        <i class="fa fa-copyright">{{base1.copyright}}</i>
+                      </span>
+                    </li>
+                  </ul>
+                    
+                  <ul class="baseline2" *ngFor="let base2 of baseline2">
+                    <li 
+                      [class.selected]="base2 === selectedBase2"
+                      (click)="onSelect(base2)">
+
+                      <ul class="legal-links col-9">
+                        <li><a href="#">{{base2.terms}}</a></li>
+                        <li><a href="#">{{base2.policy}}</a></li>
+                        <li><a href="#">{{base2.crafted}}<span class="red">&hearts;</span>{{base2.cname}}</a></li>
+                      </ul>
+
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Footer for Accion - Angular ends here -->
+
+</div>
+
+<div class="off-canvas main-navigation">
+ <div class="mn-wrap">
+   <a href="#" class="close-nav">
+     <i class="icon-close"></i>
+   </a>
+    <nav class="main-nav-wrap">
+      
+    </nav>
+    </div>
+</div>
+
+<div class="chat-bot">
+ <div class="chat-bot-wrap">
+  <a href="#" class="bot-trigger">
+    
+  </a>
+  <div class="bot-notification">
+    
+  </div>
+  <div class="chat-bot-ui">
+    
+  </div>
+  </div>
+</div>
+
+<!--
+<div class="pageloader">
+  <div class="aligner">
+    <div class="loader loader--style6" title="5">
+     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+     <rect x="0" y="13" width="4" height="5" fill="#e84b54">
+       <animate attributeName="height" attributeType="XML"
+       values="5;21;5" 
+       begin="0s" dur="0.6s" repeatCount="indefinite" />
+       <animate attributeName="y" attributeType="XML"
+       values="13; 5; 13"
+       begin="0s" dur="0.6s" repeatCount="indefinite" />
+     </rect>
+     <rect x="10" y="13" width="4" height="5" fill="#e84b54">
+       <animate attributeName="height" attributeType="XML"
+       values="5;21;5" 
+       begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+       <animate attributeName="y" attributeType="XML"
+       values="13; 5; 13"
+       begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+     </rect>
+     <rect x="20" y="13" width="4" height="5" fill="#e84b54">
+       <animate attributeName="height" attributeType="XML"
+       values="5;21;5" 
+       begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+       <animate attributeName="y" attributeType="XML"
+       values="13; 5; 13"
+       begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+     </rect>
+   </svg>
+ </div>
+  </div>
+</div>
+-->
+
